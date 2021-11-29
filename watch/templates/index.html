@@ -1,0 +1,87 @@
+<html>
+    <head><!-- Basic -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- Mobile Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <!-- Site Metas -->
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+      
+        <title>Watcher</title>
+        <style>
+            .first{
+                border: 2px solid;
+                margin: 0px 40px 0px 0px;
+                padding: 0px 45px 0px 45px;
+            }
+
+            .main{
+                display: flex;   
+            }
+            .nav{
+                text-decoration: underline;
+
+            }
+            .list{
+                padding: 0px 0px 0px 1000px;
+                margin: 0px 0px 0px 0px;
+            }
+            ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            }
+
+            li {
+            float: left;
+            }
+
+            li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            li a:hover {
+            background-color: #111;
+            }
+            .heading{
+                text-align: center;
+                text-decoration: solid;
+                font-size: 40px;
+            }
+        </style>
+      </head>
+    <body>
+        <div class="nav">
+            <nav>
+                <ul class="list">
+                <li><a href=""><h3>Home</h3></a></li>
+                <li><a href=""><h3>About</h3></a></li>
+                <li><a href=""><h3>Contact Us</h3></a></li>
+                </ul>
+            </nav>
+        </div>
+       
+     
+        <br><br>
+        <h2 class="heading">Watches</h2>
+        <div class="main">
+            {% for i in a %}
+                <div  class="first">
+                    <h3>watch: {{i.watch_type}}</h3>
+                    <h3>brand:{{i.brand_name}}</h3>
+                    <h2>price:{{i.price}}</h2>
+                    <img src="{{i.img.url}}" height="200px" width="200px" alt=" ">
+                    <h3>{{i.des}}</h3>
+                </div>
+            {% endfor %}
+        </div>
+    </body>
+</html>
